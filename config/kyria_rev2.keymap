@@ -10,7 +10,6 @@
 #define DEFAULT 0
 #define NUM     1
 #define SYMBOL  2
-#define NONE    0
 
 / {
 	keymap {
@@ -57,7 +56,6 @@
 	                 &kp LCTRL &kp LALT &kp LCMD &kp SPACE &kp ESC &kp RET  &kp SPACE  &kp BSPC &kp BSPC &kp RALT
 			>;
 		};
-
 
 	};
 };
