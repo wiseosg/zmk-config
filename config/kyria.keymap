@@ -10,6 +10,7 @@
 #define DEFAULT 0
 #define NUM     1
 #define SYMBOL  2
+#define NONE    0
 
 / {
 	keymap {
@@ -36,9 +37,9 @@
 // | SHIFT |     |     |      |  8   |      | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |   =  |  9    |  ,    |  .   |   /   | CTRL |
 //                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   ESC   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
 			bindings = <
-	&kp CAPS  &kp EXCL &kp AT   &kp none &kp PRCNT &kp none                                            &kp none  &kp none  &kp none  &kp none &kp none &kp BSLH
-	&kp TAB   &kp N6   &kp N4   &kp N0   &kp N2    &kp none                                            &kp none  &kp N3    &kp N1    &kp N5   &kp N7   &kp SQT
-	&kp LSHFT &kp none &kp none &kp none &kp N8    &kp none &kp LSHFT &kp LSHFT    &kp LSHFT &kp LSHFT &kp EQUAL &kp N9    &kp COMMA &kp DOT  &kp FSLH &kp RCTRL
+	&kp CAPS  &kp EXCL &kp AT   &none  &kp PRCNT &none                                      &none     &none  &none     &none   &none    &kp BSLH
+	&kp TAB   &kp N6   &kp N4   &kp N0 &kp N2    &none                                      &none     &kp N3 &kp N1    &kp N5  &kp N7   &kp SQT
+	&kp LSHFT &none &none &none &kp N8 &none     &kp LSHFT &kp LSHFT    &kp LSHFT &kp LSHFT &kp EQUAL &kp N9 &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                   &kp LCTRL &kp LALT &kp LCMD &kp SPACE &kp ESC &kp RET  &kp SPACE  &kp BSPC &kp BSPC &kp RALT
 			>;
 		};
@@ -50,9 +51,9 @@
 // | SHIFT |     |     |      |      |      | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  =   |  &    |  (    |  )   |   _   | CTRL |
 //                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   ESC   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
 			bindings = <
-	&kp CAPS  &kp TILDE &kp PLUS &kp STAR &kp PRCNT &kp none                                            &kp none  &kp HASH  &kp none &kp AT   &kp none  &kp BSLH
+	&kp CAPS  &kp TILDE &kp PLUS &kp STAR &kp PRCNT &none                                               &none     &kp HASH  &none    &kp AT   &none     &kp BSLH
 	&kp TAB   &kp PIPE  &kp LBRC &kp RBRC &kp MINUS &kp BSLH                                            &kp GRAVE &kp QMARK &kp LBKT &kp RBKT &kp SEMI  &kp SQT
-	&kp LSHFT &kp none  &kp none &kp none &kp none  &kp none &kp LSHFT &kp LSHFT    &kp LSHFT &kp LSHFT &kp EQUAL &kp AMPS  &kp LPAR &kp RPAR &kp UNDER &kp RCTRL
+	&kp LSHFT &none     &none    &none    &none     &none    &kp LSHFT &kp LSHFT    &kp LSHFT &kp LSHFT &kp EQUAL &kp AMPS  &kp LPAR &kp RPAR &kp UNDER &kp RCTRL
 	                 &kp LCTRL &kp LALT &kp LCMD &kp SPACE &kp ESC &kp RET  &kp SPACE  &kp BSPC &kp BSPC &kp RALT
 			>;
 		};
