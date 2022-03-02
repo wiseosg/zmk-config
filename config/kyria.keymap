@@ -21,12 +21,12 @@
 // |  CAPS |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   ESC   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
+//                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   CAPS   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
 			bindings = <
 	&kp CAPS  &kp Q &kp W     &kp E    &kp R    &kp T                                            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
 	&kp TAB   &kp A &kp S     &kp D    &kp F    &kp G                                            &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
 	&kp LSHFT &kp Z &kp X     &kp C    &kp V    &kp B &kp LSHFT &kp LSHFT    &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                &kp LCTRL &kp LALT &kp LCMD &lt NUM SPACE &kp ESC &kp RET &lt SYMBOL SPACE &kp BSPC &kp BSPC &kp RALT
+	                &kp LCTRL &kp LALT &kp LCMD &lt NUM SPACE &kp CAPS &kp RET &lt SYMBOL SPACE &kp BSPC &kp BSPC &kp RALT
 			>;
 		};
 
@@ -35,12 +35,12 @@
 // |  CAPS |  !  |  @  |      |  %   |      |                                          |      |       |       |      |       |   \  |
 // |  TAB  |  6  |  4  |  0   |  2   |      |                                          |      |  3    |  1    |  5   |   7   |   '  |
 // | SHIFT |     |     |      |  8   |      | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |   =  |  9    |  ,    |  .   |   /   | CTRL |
-//                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   ESC   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
+//                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   CAPS   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
 			bindings = <
 	&kp CAPS  &kp EXCL &kp AT   &none  &kp PRCNT &none                                      &none     &none  &none     &none   &none    &kp BSLH
 	&kp TAB   &kp N6   &kp N4   &kp N0 &kp N2    &none                                      &none     &kp N3 &kp N1    &kp N5  &kp N7   &kp SQT
 	&kp LSHFT &none &none &none &kp N8 &none     &kp LSHFT &kp LSHFT    &kp LSHFT &kp LSHFT &kp EQUAL &kp N9 &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                   &kp LCTRL &kp LALT &kp LCMD &kp SPACE &kp ESC &kp RET  &kp SPACE  &kp BSPC &kp BSPC &kp RALT
+	                   &kp LCTRL &kp LALT &kp LCMD &kp SPACE &kp CAPS &kp RET  &kp SPACE  &kp BSPC &kp BSPC &kp RALT
 			>;
 		};
 
@@ -49,12 +49,12 @@
 // |  CAPS |  ~  |  +  |  *   |  %   |      |                                          |      |  #    |       |  @   |       |   \  |
 // |  TAB  |  |  |  {  |  }   |  -   |  /   |                                          |  `   |  ?    |  [    |  ]   |   ;   |   `  |
 // | SHIFT |     |     |      |      |      | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  =   |  &    |  (    |  )   |   _   | CTRL |
-//                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   ESC   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
+//                     | L-CTRL  | L-ALT  | L-CMD  |  SPACE  |   CAPS   |  |   RET   |  SPACE  | BSPC  | BSPC  | R-ALT |
 			bindings = <
 	&kp CAPS  &kp TILDE &kp PLUS &kp STAR &kp PRCNT &none                                               &none     &kp HASH  &none    &kp AT   &none     &kp BSLH
 	&kp TAB   &kp PIPE  &kp LBRC &kp RBRC &kp MINUS &kp BSLH                                            &kp GRAVE &kp QMARK &kp LBKT &kp RBKT &kp SEMI  &kp SQT
 	&kp LSHFT &none     &none    &none    &none     &none    &kp LSHFT &kp LSHFT    &kp LSHFT &kp LSHFT &kp EQUAL &kp AMPS  &kp LPAR &kp RPAR &kp UNDER &kp RCTRL
-	                 &kp LCTRL &kp LALT &kp LCMD &kp SPACE &kp ESC &kp RET  &kp SPACE  &kp BSPC &kp BSPC &kp RALT
+	                 &kp LCTRL &kp LALT &kp LCMD &kp SPACE &kp CAPS &kp RET  &kp SPACE  &kp BSPC &kp BSPC &kp RALT
 			>;
 		};
 
