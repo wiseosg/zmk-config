@@ -133,10 +133,10 @@
             // |       |     |     |      |  F8  |      |                                          |  =   |  F9   |  ,    |  .   |   /   |      |
             label="Fun"
             bindings = <
-                &trans  &kp EXCL &kp AT &trans &kp PRCNT &trans                               &trans    &trans &trans    &trans  &trans   &trans
-                &trans  &kp F6   &kp F4 &kp F0 &kp F2    &kp F12                              &kp F11   &kp F3 &kp F1    &kp F5  &kp F7   &trans
-                &trans  &trans   &trans &trans &kp F8    &trans  &trans &trans &trans &trans  &kp EQUAL &kp F9 &kp COMMA &kp DOT &kp FSLH &trans
-                                        &trans &trans    &trans  &trans &trans &trans &kp ESC &kp DEL   &trans &trans
+                &trans  &kp EXCL &kp AT &trans  &kp PRCNT &trans                               &trans    &trans &trans    &trans  &trans   &trans
+                &trans  &kp F6   &kp F4 &kp F10 &kp F2    &kp F12                              &kp F11   &kp F3 &kp F1    &kp F5  &kp F7   &trans
+                &trans  &trans   &trans &trans  &kp F8    &trans  &trans &trans &trans &trans  &kp EQUAL &kp F9 &kp COMMA &kp DOT &kp FSLH &trans
+                                        &trans  &trans    &trans  &trans &trans &trans &kp ESC &kp DEL   &trans &trans
             >;
         };
 
