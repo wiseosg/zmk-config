@@ -17,6 +17,7 @@
 #define L_FUN 5
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+// dummy comment
 &lt { quick-tap-ms = <150>; };
 
 / {
