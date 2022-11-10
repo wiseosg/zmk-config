@@ -111,7 +111,7 @@
                 // |   |     |     |      |      |      |      |      |  |      |      |  =   |  &    |  (    |  )   |   _   |      |
             label="Sym";
             bindings = <
-                &trans &kp TILDE      &kp PLUS      &kp STAR      &kp PRCNT       &kp BSLH                             &kp SQT   &kp HASH        &trans        &kp AT        &trans         &trans
+                &trans &kp TILDE      &kp PLUS      &kp STAR      &kp PRCNT       &kp BSLH                             &kp SQT   &kp DQT         &kp HASH      &kp AT        &trans         &trans
                 &trans &hm LCTRL PIPE &hm LALT LBRC &hm LGUI RBRC &hm LSHFT MINUS &kp BSLH                             &kp GRAVE &hm LSHFT QMARK &hm LGUI LBKT &hm LALT RBKT &hm LCTRL SEMI &trans
                 &trans &trans         &trans        &trans        &trans          &trans   &trans &trans &trans &trans &kp EQUAL &kp AMPS        &kp LPAR      &kp RPAR      &kp UNDER      &trans
                                                     &trans        &trans          &trans   &trans &trans &trans &trans &trans    &trans          &trans
