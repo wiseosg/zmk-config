@@ -79,10 +79,11 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            global-quick-tap-ms = <150>;
-            // quick-tap-ms = <150>;
+            // global-quick-tap-ms = <150>;        // requires PR #1387
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
+            // hold-trigger-on-release;            // requires PR #1423
         };
         rh: right_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -90,10 +91,11 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            global-quick-tap-ms = <150>;
-            // quick-tap-ms = <150>;
+            // global-quick-tap-ms = <150>;        // requires PR #1387
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
+            // hold-trigger-on-release;            // requires PR #1423
         };
     };
 };
