@@ -37,16 +37,44 @@
 
     };
 
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+    td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
         };
+
+    behaviors {
+        lh_pht: left_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 12>;    // <---[[right-hand keys]]
+        };
+        rh_pht: right_hand_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5>;    // <---[[right-hand keys]]
+        };
+        // hm: homerow_mods {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "homerow mods";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <150>;
+        //     quick-tap-ms = <0>;
+        //     flavor = "tap-preferred";
+        //     bindings = <&kp>, <&kp>;
+        // };
     };
 
     keymap {
@@ -67,10 +95,10 @@
         default_layer {
             label="Base";
             bindings = <
-                &none &kp Q       &kp W      &kp E      &kp R                 &kp T                                                    &kp Y         &kp U                 &kp I      &kp O      &kp P          &none
-                &none &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F           &kp G                                                    &kp H         &hm LSHFT J           &hm LGUI K &hm LALT L &hm LCTRL SEMI &none
-                &none &kp Z       &kp X      &kp C      &kp V                 &kp B         &none           &none &none &none          &kp N         &kp M                 &kp COMMA  &kp DOT    &kp FSLH       &none
-                                             &none      &mt LS(LA(LCTRL)) ESC &lt L_NAV SPACE &lt L_NUM TAB &none &none &lt L_NUM BSPC &lt L_SYM RET &mt LS(LA(LCTRL)) ESC &none
+                &kp GRAVE             &kp Q           &kp W          &kp E          &kp R                 &kp T                                                    &kp Y         &kp U                 &kp I          &kp O          &kp P              &kp BSLH
+                &mt LS(LA(LCTRL)) ESC &lh_pht LCTRL A &lh_pht LALT S &lh_pht LGUI D &lh_pht LSHFT F       &kp G                                                    &kp H         &rh_pht LSHFT J       &rh_pht LGUI K &rh_pht LALT L &rh_pht LCTRL SEMI &kp SQT
+                &kp LS                &kp Z           &kp X          &kp C          &kp V                 &kp B           &none         &none &none &none          &kp N         &kp M                 &kp COMMA      &kp DOT        &kp FSLH           &none
+                                                                     &none          &mt LS(LA(LCTRL)) ESC &lt L_NAV SPACE &lt L_NUM TAB &none &none &lt L_NUM BSPC &lt L_SYM RET &mt LS(LA(LCTRL)) ESC &none
             >;
         };
 
@@ -112,7 +140,7 @@
             label="Sym";
             bindings = <
                 &trans &kp TILDE      &kp PLUS      &kp STAR      &kp PRCNT       &kp BSLH                             &kp SQT   &kp DQT         &kp HASH      &kp AT        &trans         &trans
-                &trans &hm LCTRL PIPE &hm LALT LBRC &hm LGUI RBRC &hm LSHFT MINUS &kp BSLH                             &kp GRAVE &hm LSHFT QMARK &hm LGUI LBKT &hm LALT RBKT &hm LCTRL SEMI &trans
+                &trans &hm LCTRL PIPE &hm LALT LBRC &hm LGUI RBRC &hm LSHFT MINUS &kp FSLH                             &kp GRAVE &hm LSHFT QMARK &hm LGUI LBKT &hm LALT RBKT &hm LCTRL SEMI &trans
                 &trans &trans         &trans        &trans        &trans          &trans   &trans &trans &trans &trans &kp EQUAL &kp AMPS        &kp LPAR      &kp RPAR      &kp UNDER      &trans
                                                     &trans        &trans          &trans   &trans &trans &trans &trans &trans    &trans          &trans
             >;
