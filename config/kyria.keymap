@@ -46,7 +46,7 @@
         };
 
     behaviors {
-        lh_pht: left_hand_positional_hold_tap {
+        lh: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
@@ -56,7 +56,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <6 7 8 9 10 11 12>;    // <---[[right-hand keys]]
         };
-        rh_pht: right_hand_positional_hold_tap {
+        rh: right_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
@@ -95,10 +95,10 @@
         default_layer {
             label="Base";
             bindings = <
-                &kp GRAVE             &kp Q           &kp W          &kp E          &kp R                 &kp T                                                    &kp Y         &kp U                 &kp I          &kp O          &kp P              &kp BSLH
-                &mt LS(LA(LCTRL)) ESC &lh_pht LCTRL A &lh_pht LALT S &lh_pht LGUI D &lh_pht LSHFT F       &kp G                                                    &kp H         &rh_pht LSHFT J       &rh_pht LGUI K &rh_pht LALT L &rh_pht LCTRL SEMI &kp SQT
-                &kp LS                &kp Z           &kp X          &kp C          &kp V                 &kp B           &none         &none &none &none          &kp N         &kp M                 &kp COMMA      &kp DOT        &kp FSLH           &none
-                                                                     &none          &mt LS(LA(LCTRL)) ESC &lt L_NAV SPACE &lt L_NUM TAB &none &none &lt L_NUM BSPC &lt L_SYM RET &mt LS(LA(LCTRL)) ESC &none
+                &kp GRAVE             &kp Q       &kp W      &kp E      &kp R                 &kp T                                                    &kp Y         &kp U                 &kp I      &kp O      &kp P          &kp BSLH
+                &mt LS(LA(LCTRL)) ESC &lh LCTRL A &lh LALT S &lh LGUI D &lh LSHFT F           &kp G                                                    &kp H         &rh LSHFT J           &rh LGUI K &rh LALT L &rh LCTRL SEMI &kp SQT
+                &kp LS                &kp Z       &kp X      &kp C      &kp V                 &kp B           &none         &none &none &none          &kp N         &kp M                 &kp COMMA  &kp DOT    &kp FSLH       &none
+                                                             &none      &mt LS(LA(LCTRL)) ESC &lt L_NAV SPACE &lt L_NUM TAB &none &none &lt L_NUM BSPC &lt L_SYM RET &mt LS(LA(LCTRL)) ESC &none
             >;
         };
 
@@ -126,7 +126,7 @@
             label="Num";
             bindings = <
                 &trans &kp F7       &kp F8      &kp F9      &kp F12       &trans                             &kp KP_SLASH &kp N7       &kp N8      &kp N9      &kp MINUS      &trans
-                &trans &hm LCTRL F4 &hm LALT F5 &hm LGUI F6 &hm LSHFT F11 &trans                             &kp N0       &hm LSHFT N4 &hm LGUI N5 &hm LALT N6 &hm LCTRL PLUS &trans
+                &trans &lh LCTRL F4 &lh LALT F5 &lh LGUI F6 &lh LSHFT F11 &trans                             &kp N0       &rh LSHFT N4 &rh LGUI N5 &rh LALT N6 &rh LCTRL PLUS &trans
                 &trans &kp F1       &kp F2      &kp F3      &kp F10       &trans &trans &trans &trans &trans &kp ASTERISK &kp N1       &kp N2      &kp N3      &kp DOT        &trans
                                                 &trans      &trans        &trans &trans &trans &trans &trans &trans       &trans       &trans
             >;
@@ -140,7 +140,7 @@
             label="Sym";
             bindings = <
                 &trans &kp TILDE      &kp PLUS      &kp STAR      &kp PRCNT       &kp BSLH                             &kp SQT   &kp DQT         &kp HASH      &kp AT        &trans         &trans
-                &trans &hm LCTRL PIPE &hm LALT LBRC &hm LGUI RBRC &hm LSHFT MINUS &kp FSLH                             &kp GRAVE &hm LSHFT QMARK &hm LGUI LBKT &hm LALT RBKT &hm LCTRL SEMI &trans
+                &trans &lh LCTRL PIPE &lh LALT LBRC &lh LGUI RBRC &lh LSHFT MINUS &kp FSLH                             &kp GRAVE &rh LSHFT QMARK &rh LGUI LBKT &rh LALT RBKT &rh LCTRL SEMI &trans
                 &trans &trans         &trans        &trans        &trans          &trans   &trans &trans &trans &trans &kp EQUAL &kp AMPS        &kp LPAR      &kp RPAR      &kp UNDER      &trans
                                                     &trans        &trans          &trans   &trans &trans &trans &trans &trans    &trans          &trans
             >;
