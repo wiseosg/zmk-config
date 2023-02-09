@@ -95,6 +95,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
+    };
 };
 
 / {
@@ -122,9 +123,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp N1>, <&kp N2>, <&kp N3>;
         };
-
-
-    };
 
     keymap {
         compatible = "zmk,keymap";
