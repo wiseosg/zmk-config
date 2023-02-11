@@ -100,6 +100,40 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <RT1 RT2>;
+            bindings = <&kp LBRC>;
+        };
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <RT1 RT3>;
+            bindings = <&kp RBRC>;
+        };
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <RM1 RM2>;
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <RM1 RM3>;
+            bindings = <&kp RPAR>;
+        };
+        combo_lbkt {
+            timeout-ms = <50>;
+            key-positions = <RB1 BR2>;
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <RB1 RB3>;
+            bindings = <&kp RBKT>;
+        };
+    };
+
     td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
