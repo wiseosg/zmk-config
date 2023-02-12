@@ -77,9 +77,10 @@
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <280>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             // global-quick-tap-ms = <150>;        // requires PR #1387
-            quick-tap-ms = <150>;
+            global-quick-tap;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             // hold-trigger-on-release;            // requires PR #1423
@@ -89,9 +90,10 @@
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <280>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             // global-quick-tap-ms = <150>;        // requires PR #1387
-            quick-tap-ms = <150>;
+            global-quick-tap;
+            quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             // hold-trigger-on-release;            // requires PR #1423
@@ -108,27 +110,27 @@
             bindings = <&kp LBRC>;
         };
         combo_rbrc {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <RT1 RT3>;
             bindings = <&kp RBRC>;
         };
         combo_lpar {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <RM0 RM2>;
             bindings = <&kp LPAR>;
         };
         combo_rpar {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <RM0 RM3>;
             bindings = <&kp RPAR>;
         };
         combo_lbkt {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <RB1 RB2>;
             bindings = <&kp LBKT>;
         };
         combo_rbkt {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <RB1 RB3>;
             bindings = <&kp RBKT>;
         };
