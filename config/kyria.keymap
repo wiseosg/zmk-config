@@ -182,10 +182,10 @@
         symbol_layer {
             label="Sym";
             bindings = <
-&trans &kp TILDE      &kp PLUS      &kp STAR      &kp PRCNT       &kp BSLH                             &kp SQT   &kp DQT         &kp HASH      &kp AT        &trans         &trans
-&trans &lh LCTRL PIPE &lh LALT LBRC &lh LGUI RBRC &lh LSHFT MINUS &kp FSLH                             &kp GRAVE &rh LSHFT QMARK &rh LGUI LBKT &rh LALT RBKT &rh LCTRL SEMI &trans
-&trans &trans         &trans        &trans        &trans          &trans   &trans &trans &trans &trans &kp EQUAL &kp AMPS        &kp LPAR      &kp RPAR      &kp UNDER      &trans
-                                    &trans        &trans          &trans   &trans &trans &trans &trans &trans    &trans          &trans
+&trans &trans         &kp LT         &kp GT        &kp AT          &kp PERIOD                              &kp AMPERSAND &kp QUESTION    &kp LBKT      &kp RBKT      &trans         &trans
+&trans &lh LCTRL EXCL &lh LALT MINUS &lh LGUI PLUS &lh LSHFT EQUAL &kp HASH                                &kp PIPE      &rh LSHFT COLON &rh LGUI LPAR &rh LALT RPAR &rh LCTRL SEMI &trans
+&trans &trans         &kp SLASH      &kp ASTERISK  &kp CARET       &kp PERCENT &trans &trans &trans &trans &kp TILDE     &kp DOLLAR      &kp LBRC      &kp RBRC      &kp UNDER      &trans
+                                     &trans        &trans          &trans      &trans &trans &trans &trans &trans        &trans          &trans
             >;
         };
 
